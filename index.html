@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Completa de JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>JavaScript desde Cero (Modo Realista)</h1>
+  <p>Guía pensada para desarrolladores que vienen de Python</p>
+</header>
+
+<main>
+
+<section>
+  <h2>¿Qué es JavaScript realmente?</h2>
+  <p>
+    JavaScript es un lenguaje de programación interpretado que corre principalmente en el navegador,
+    pero también en servidores (Node.js). A diferencia de Python, JavaScript está profundamente ligado
+    al navegador y al manejo de interfaces.
+  </p>
+
+  <p>
+    Es importante entender algo desde el inicio: <strong>JavaScript puede volverse confuso rápidamente</strong>
+    si no se entienden bien conceptos como funciones, contexto (<code>this</code>) y asincronía.
+  </p>
+</section>
+
+<section>
+  <h2>¿Por qué parece difícil?</h2>
+  <ul>
+    <li>No es orientado a clases tradicional (aunque ahora tenga clases)</li>
+    <li>Está basado en funciones</li>
+    <li>Maneja asincronía (promesas, callbacks)</li>
+    <li>El comportamiento de <code>this</code> cambia</li>
+    <li>Variables con reglas diferentes (var, let, const)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>JavaScript es un lenguaje basado en funciones</h2>
+  <p>
+    En JS, las funciones son ciudadanos de primera clase.
+  </p>
+
+  <pre>
+function saludar() {
+  console.log("Hola");
+}
+
+const otra = saludar;
+otra();
+  </pre>
+
+  <p>
+    Puedes guardar funciones en variables, pasarlas como parámetros y retornarlas.
+  </p>
+</section>
+
+<section>
+  <h2>Objetos en JavaScript</h2>
+  <p>
+    Todo en JS gira alrededor de objetos.
+  </p>
+
+  <pre>
+const persona = {
+  nombre: "Moisés",
+  edad: 25,
+  saludar() {
+    console.log("Hola " + this.nombre);
+  }
+};
+
+persona.saludar();
+  </pre>
+
+  <p>
+    A diferencia de Python, aquí los objetos son más flexibles pero también menos estrictos.
+  </p>
+</section>
+
+<section>
+  <h2>Variables: var vs let vs const</h2>
+  <ul>
+    <li><code>var</code>: vieja, con hoisting raro</li>
+    <li><code>let</code>: moderna, cambia valor</li>
+    <li><code>const</code>: no cambia referencia</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ejercicios (Nivel Básico - Medio)</h2>
+
+  <h3>Básicos</h3>
+  <ol>
+    <li>Crear una función que reciba 2 números y retorne la suma</li>
+    <li>Crear una función que diga si un número es par o impar</li>
+    <li>Convertir una lista de números en sus cuadrados</li>
+    <li>Contar cuántas letras tiene una palabra</li>
+    <li>Invertir un string</li>
+  </ol>
+
+  <h3>Intermedios</h3>
+  <ol>
+    <li>Crear un objeto "usuario" con métodos</li>
+    <li>Simular un contador usando closure</li>
+    <li>Crear una función que reciba otra función (callback)</li>
+    <li>Filtrar números mayores a 10 en un array</li>
+    <li>Reducir un array a su suma total</li>
+  </ol>
+
+  <h3>Más avanzados</h3>
+  <ol>
+    <li>Simular una promesa con setTimeout</li>
+    <li>Crear una función async que consuma datos falsos</li>
+    <li>Construir una clase Persona</li>
+    <li>Extender la clase a Estudiante</li>
+    <li>Manipular el DOM: crear un botón dinámico</li>
+  </ol>
+
+</section>
+
+<section>
+  <h2>Ejercicios DOM</h2>
+  <ol>
+    <li>Crear un input y mostrar lo que escribe el usuario en tiempo real</li>
+    <li>Crear una lista dinámica donde puedas agregar elementos</li>
+  </ol>
+</section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
