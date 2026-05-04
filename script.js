@@ -14,14 +14,14 @@ function contador() {
 // Ejercicios
 // 1. Crear una función que sume dos números
 
-
+//función es un bloque de código que se puede reutilizar, y que devuelve un resultado (o no devuelve nada, dependiendo del caso).
 function suma_dos_numeros(){
 
   //Pide ingresar un número al usuario (primero texto, luego se convierte a Number)
   const num1 =  Number(prompt("Ingrese el primer número: ")); 
   const num2= Number(prompt("Ingrese el segundo número: "));
 
-  suma= num1 + num2; //SImplemente usa los dos números para realizar la operación de suma
+  suma= num1 + num2; //Simplemente usa los dos números para realizar la operación de suma
 
   return suma; //La función devuelve el resultado (número, en este caso)
 
