@@ -74,7 +74,7 @@ function cuadrados(lista){ //Función cuadrados que recibe una lista de números
 function contadorLetras(palabra){ //funcion contadorLetras que recibe una palabra y devuelve su cantidad en letras 
     let contador = 0; //declarar un contador inicializado en 0
 
-    for (const caracter of palabra) { // similar a "for letra in palabra" en Python. Lee cada letra de la palabra
+    for (const caracter of palabra) { // similar a "for caracter in palabra" en Python. Lee cada letra de la palabra
         
         // Si el caracter NO es un espacio vacío, lo contamos
         if (caracter !== " ") { 
@@ -88,11 +88,20 @@ function contadorLetras(palabra){ //funcion contadorLetras que recibe una palabr
     
 // 5. Invertir un string
 
-function invertirString(string){ //función invertirString que recibe un valor tipo texto y lo retorna invertido
-
-    const invertido = string
+function invertirString(string){ 
+    // En JS los strings no se pueden voltear directamente.
     
-    return invertido
-
-
+    // 1. split(""): Usa un separador vacío y convierte el texto en una lista de letras.
+    // Es el equivalente en Python a hacer: list(string)
+    const listaDeLetras = string.split(""); // "hola" -> Devuelve: ["h", "o", "l", "a"] (Corta en cada letra)
+    
+    // 2. reverse(): Voltea el orden de los elementos de esa lista.
+    // Es el equivalente en Python a hacer: listaDeLetras.reverse()
+    const listaInvertida = listaDeLetras.reverse(); //["h", "o", "l", "a"] -> ["a", "l", "o", "h"]
+    
+    // 3. join(""): Une los elementos de la lista en un solo texto, pegando las letras sin nada en medio.
+    // Es el equivalente en Python a hacer: "".join(listaInvertida)
+    const invertido = listaInvertida.join(""); //["a", "l", "o", "h"] -> "aloh"
+    
+    return invertido;
 }
