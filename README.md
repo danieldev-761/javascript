@@ -40,6 +40,8 @@ JAVASCRIPT/
 ├── index.html            → Página principal del proyecto
 ├── style.css             → Estilos base
 ├── script.js             → Punto de entrada general
+├── prueba.html            → Página para la prueba de manipulación DOM
+├── prueba.css             → Css sencillo para la prueba de manipulación DOM
 └── README.md             → Documentación del proyecto
 ```
 
